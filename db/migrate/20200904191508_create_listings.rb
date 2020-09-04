@@ -7,6 +7,7 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.string :description
       t.float :star
       t.float :price
+      t.belongs_to :host
       
       t.timestamps
     end

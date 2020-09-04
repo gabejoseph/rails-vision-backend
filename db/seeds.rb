@@ -21,7 +21,6 @@ end
         username: Faker::Internet.username,
         email: Faker::Internet.safe_email,
         password: Faker::Internet.password(min_length: 10),
-        listing_id: Faker::Number.decimal(range: 1..30)
     }])
 end 
 
@@ -32,6 +31,7 @@ end
         title: Faker::Book.title,
         description: Faker::Marketing.buzzwords,
         star: Faker::Number.decimal(l_digits: 1, r_digits: 2),
-        price: Faker::Number.decimal(l_digits: 3, r_digits: 2)
+        price: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+        host_id: Faker::Number.within(range: 1..10)
     }])
 end 
