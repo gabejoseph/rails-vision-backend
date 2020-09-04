@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_191508) do
     t.string "description"
     t.float "star"
     t.float "price"
-    t.float "total"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

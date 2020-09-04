@@ -7,10 +7,8 @@ class CreateListings < ActiveRecord::Migration[6.0]
       t.string :description
       t.float :star
       t.float :price
-      t.float :total
       t.belongs_to :user
       
-
       t.timestamps
     end
   end

@@ -15,10 +15,13 @@
     }])
 end 
 
-# 10.times do 
-#     Photo.create([{
-#         img_src: Faker::LoremPixel.image,
-#         caption: Faker::Quotes::Rajnikanth.joke,
-#         user_id: Faker::Number.within(range: 1..10)
-#     }])
-# end 
+10.times do 
+    Listing.create([{
+        img: Faker::LoremPixel.image,
+        location: Faker::Address.city,
+        title: Faker::Book.title,
+        description: Faker::Marketing.buzzwords,
+        star: rand(0.00..5.00),
+        price: rand(0.00..1000.00)
+    }])
+end 
