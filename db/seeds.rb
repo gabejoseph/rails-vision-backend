@@ -16,12 +16,22 @@
 end 
 
 10.times do 
+    Host.create([{
+        name: Faker::Name.name,
+        username: Faker::Internet.username,
+        email: Faker::Internet.safe_email,
+        password: Faker::Internet.password(min_length: 10),
+        listing_id: Faker::Number.decimal(range: 1..30)
+    }])
+end 
+
+30.times do 
     Listing.create([{
         img: Faker::LoremPixel.image,
         location: Faker::Address.city,
         title: Faker::Book.title,
         description: Faker::Marketing.buzzwords,
-        star: rand(0.00..5.00),
-        price: rand(0.00..1000.00)
+        star: Faker::Number.decimal(l_digits: 1, r_digits: 2),
+        price: Faker::Number.decimal(l_digits: 3, r_digits: 2)
     }])
 end 

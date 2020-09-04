@@ -1,6 +1,7 @@
-class User < ApplicationRecord
+class Host < ApplicationRecord
     has_secure_password
     validates :password, length: { minimum: 5 }
     validates :username, :email, uniqueness: true
-
+    has_many :listings
+    
 end
