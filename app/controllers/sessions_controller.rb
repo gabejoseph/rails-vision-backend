@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+    include CurrentUserConcern
 
     def create
         @user = User.find_by(name: params[:user][:email]) || Host.find_by(name: params[:user][:email])
@@ -12,6 +13,10 @@ class SessionsController < ApplicationController
         else 
             render json: { status: 401 }
         end 
+    end 
+
+    def logged_in
+        current_user
     end 
 
 end
