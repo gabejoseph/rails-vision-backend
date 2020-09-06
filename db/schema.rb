@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_04_222457) do
-
-  create_table "hosts", force: :cascade do |t|
-    t.string "name"
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2020_09_04_191508) do
 
   create_table "listings", force: :cascade do |t|
     t.string "img"
@@ -28,10 +19,10 @@ ActiveRecord::Schema.define(version: 2020_09_04_222457) do
     t.string "description"
     t.float "star"
     t.float "price"
-    t.integer "host_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["host_id"], name: "index_listings_on_host_id"
+    t.index ["user_id"], name: "index_listings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

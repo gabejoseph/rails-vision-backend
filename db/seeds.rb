@@ -15,15 +15,6 @@
     }])
 end 
 
-10.times do 
-    Host.create([{
-        name: Faker::Name.name,
-        username: Faker::Internet.username,
-        email: Faker::Internet.safe_email,
-        password: 'password'
-    }])
-end 
-
 30.times do 
     Listing.create([{
         img: Faker::LoremPixel.image,
@@ -32,6 +23,6 @@ end
         description: Faker::Marketing.buzzwords,
         star: Faker::Number.decimal(l_digits: 1, r_digits: 2),
         price: Faker::Number.decimal(l_digits: 3, r_digits: 2),
-        host_id: Faker::Number.within(range: 1..10)
+        user_id: Faker::Number.within(range: 1..5)
     }])
 end 
