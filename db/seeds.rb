@@ -11,7 +11,7 @@
         name: Faker::Name.name,
         username: Faker::Internet.username,
         email: Faker::Internet.safe_email,
-        password: Faker::Internet.password(min_length: 10)
+        password: 'password'
     }])
 end 
 
@@ -20,7 +20,7 @@ end
         name: Faker::Name.name,
         username: Faker::Internet.username,
         email: Faker::Internet.safe_email,
-        password: Faker::Internet.password(min_length: 10)
+        password: 'password'
     }])
 end 
 
