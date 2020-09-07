@@ -1,10 +1,10 @@
 class RegistrationsController < ApplicationController
 
     def create 
-        user = User.create!(
-            email: params[:user][:email],
-            password: params[:user][:password],
-            username: params[:user][:username]
+        user = User.create(
+            email: params[:email],
+            password: params[:password],
+            username: params[:username]
         )
 
         if user 
