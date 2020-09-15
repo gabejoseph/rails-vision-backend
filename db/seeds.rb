@@ -18,9 +18,9 @@ end
 30.times do 
     Listing.create([{
         img: Faker::LoremPixel.image,
-        location: Faker::Address.city,
-        title: Faker::Book.title,
-        description: Faker::Marketing.buzzwords,
+        location: Faker::Address.street_address,
+        title: Faker::Restaurant.name,
+        description: Faker::Restaurant.description,
         star: Faker::Number.decimal(l_digits: 1, r_digits: 2),
         price: Faker::Number.decimal(l_digits: 3, r_digits: 2),
         user_id: Faker::Number.within(range: 1..5)
